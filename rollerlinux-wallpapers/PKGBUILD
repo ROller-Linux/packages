@@ -1,0 +1,14 @@
+pkgname=rollerlinux-wallpapers
+pkgver=1.0
+_pkghash="7d03547d8fcaeeade6e0592dc28c92a0ae330b0a"
+pkgrel=1
+pkgdesc="ROller Linux Wallpapers"
+arch=('any')
+license=('MIT')
+source=("https://github.com/ROller-Linux/wallpapers/archive/${_pkghash}.zip")
+md5sums=(SKIP)
+
+package() {
+	cd "wallpapers-${_pkghash}"
+    install -Dm644 "ROller Linux Wallpaper.png" "${pkgdir}/usr/share/backgrounds/ROller Linux/ROller Linux Wallpaper.png"
+}
